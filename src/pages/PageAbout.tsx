@@ -7,7 +7,7 @@ import Cfooter from "../compo/footer";
 import { fetchNotionData } from "./api/notionfront";
 import BlogMain from '../compo/blogMain';
 import styles from "../styles/home.module.css";
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps } from 'next';
 
 
 

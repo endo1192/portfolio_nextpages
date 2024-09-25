@@ -6,12 +6,12 @@ import Link from "next/link";
 import styles from "../styles/home.module.css";
 import Cheader from "../compo/header";
 import Cfooter from "../compo/footer";
-import {
+/*import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "../components/ui/accordion"
+} from "../components/ui/accordion"*/
   
 
 

@@ -2,18 +2,15 @@ import React from 'react';
 import styled from "styled-components";
 import Pop from '../compo/pop';
 import Poptext from '../compo/Poptext';
-import Poph2 from '../compo/Poph2';
 import Cheader from "../compo/header";
 import Cfooter from "../compo/footer";
 import Link from "next/link";
 import styles from "../styles/home.module.css";
 
-import {getStaticPropsNotion} from "./[id]";
-import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import BlogMain from '../compo/blogMain';
 
 import { fetchNotionData } from "./api/notionfront";
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps } from 'next';
 
 
 

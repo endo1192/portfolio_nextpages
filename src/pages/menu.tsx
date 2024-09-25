@@ -1,10 +1,9 @@
 // pages/index.tsx
 import { GetServerSideProps } from 'next';
-import { getDatabase,getPage,getBlocks } from '../lib/notion';
+import { getDatabase } from '../lib/notion';
 import Link from 'next/link';
 import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
-import {getStaticPropsNotion} from "./[id]";
-import BlogMain from '../compo/blogMain';
+
 
 
 /*interface NotionPage {
@@ -22,7 +21,7 @@ interface NotionDatabaseProps {
 
 export const databaseId = process.env.NEXT_PUBLIC_DB_URL; 
 
-export const getServerSideProps: GetServerSideProps<NotionDatabaseProps> = async (context) => {
+export const getServerSideProps: GetServerSideProps<NotionDatabaseProps> = async () => {
   
 
   if (!databaseId) {

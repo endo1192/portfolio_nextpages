@@ -3,12 +3,6 @@ import styled from "styled-components";
 import { FormEventHandler } from "react";
 import Cheader from "../compo/header";
 import Cfooter from "../compo/footer";
-import FullCalendar from '@fullcalendar/react';
-
-import dayGridPlugin from '@fullcalendar/daygrid';
-
-import interactionPlugin from "@fullcalendar/interaction";
-import styles from "../styles/home.module.css";
 
 
 

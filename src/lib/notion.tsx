@@ -1,6 +1,6 @@
 // lib/notion.ts
 import { Client } from '@notionhq/client';
-import { DatabaseObjectResponse, PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 
 
 const notion = new Client({

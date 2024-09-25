@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-const BlogMain = ({ page, blocks }) => {
+const BlogMain = ({ blocks }: { blocks: any }) => {
   return (
     <div>
       {/*       
@@ -12,12 +12,12 @@ const BlogMain = ({ page, blocks }) => {
 
       {/* ブロックデータをループして表示 */}
       <div>
-        {blocks.map((block) => {
+        {blocks.map((block: any) => {
           switch (block.type) {
             case 'paragraph':
               return (
                 <p key={block.id}>
-                  {block.paragraph.rich_text.map((text, index) => (
+                  {block.paragraph.rich_text.map((text: any, index: any) => (
                     <span key={index}>{text.plain_text}</span>
                   ))}
                 </p>
@@ -25,7 +25,7 @@ const BlogMain = ({ page, blocks }) => {
               case "heading_1":
                 return (
                   <h1 key={block.id}>
-                    {block.heading_1.rich_text.map((text, index) => (
+                    {block.heading_1.rich_text.map((text: any, index: any) => (
                     <span key={index}>{text.plain_text}</span>
                     ))}
                   </h1>
@@ -33,7 +33,7 @@ const BlogMain = ({ page, blocks }) => {
               case "heading_2":
                 return (
                   <h2 key={block.id}>
-                    {block.heading_2.rich_text.map((text, index) => (
+                    {block.heading_2.rich_text.map((text: any, index: any) => (
                     <span key={index}>{text.plain_text}</span>
                     ))}
                   </h2>
@@ -41,7 +41,7 @@ const BlogMain = ({ page, blocks }) => {
               case "heading_3":
                 return (
                   <h3 key={block.id}>
-                    {block.heading_3.rich_text.map((text, index) => (
+                    {block.heading_3.rich_text.map((text: any, index: any) => (
                     <span key={index}>{text.plain_text}</span>
                     ))}
                   </h3>

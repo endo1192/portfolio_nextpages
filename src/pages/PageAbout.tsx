@@ -31,7 +31,12 @@ export const getServerSideProps: GetStaticProps = async () => {
     };
   };
 
-function PageAbout({ page, blocks }) {
+
+  interface PageAboutProps {
+    blocks: any;
+  }
+
+function PageAbout({ blocks }: PageAboutProps) {
     return(
         <>
         <div className={styles.Home}>
@@ -44,7 +49,7 @@ function PageAbout({ page, blocks }) {
             {'大学入学後は部活動・国際交流・アルバイトなど様々な活動に取り組みつつ、PC関連のスキルの学習なども積極的に行っており、幅広い分野の仕事で活躍できるよう日々精進しています'}<br /><br />
             </Poptext>
             <br /><br /><Shr></Shr><br />
-            <BlogMain page={page} blocks={blocks} />
+            <BlogMain blocks={blocks} />
         </div>
         <Cfooter />
         </>

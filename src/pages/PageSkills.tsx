@@ -32,8 +32,12 @@ export const getServerSideProps: GetStaticProps = async () => {
     };
   };
 
+  interface PageSkillsProps {
+    blocks: any;
+  }
 
-function PageSkills({ page, blocks }) {
+
+function PageSkills({ blocks }: PageSkillsProps) {
     return(
         <>
         <div className={styles.Home}>
@@ -41,7 +45,7 @@ function PageSkills({ page, blocks }) {
             <Pop>{'Skills'}</Pop>
             <Poptext>{'実際の制作物は'}<SLink href="/PageWorks">Works</SLink>{'をご参照ください'}</Poptext><br /><br />
             <br /><br /><Shr></Shr><br />
-            <BlogMain page={page} blocks={blocks} />
+            <BlogMain blocks={blocks} />
         </div>
         <Cfooter />
         </>

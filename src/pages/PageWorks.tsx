@@ -29,14 +29,18 @@ export const getServerSideProps: GetStaticProps = async () => {
     };
   };
 
+  interface PageWorksProps {
+    blocks: any;
+  }
 
-function PageWorks({ page, blocks }) {
+
+function PageWorks({ blocks }: PageWorksProps) {
     return(
         <>
         <div className={styles.Home}>
             <Cheader /><br /><br /><br />
             <Pop>{'Works'}</Pop>
-            <BlogMain page={page} blocks={blocks} />
+            <BlogMain blocks={blocks} />
         </div>
         <Cfooter />
         </>

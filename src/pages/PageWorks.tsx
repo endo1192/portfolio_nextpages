@@ -10,7 +10,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import BlogMain from '../compo/blogMain';
 
 
-// `getStaticProps`の代わりにデータをAPI経由で取得
+
 export const getServerSideProps: GetStaticProps = async () => {
     const textid = process.env.NOTION_WORKS_KEY
 

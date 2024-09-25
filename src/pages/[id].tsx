@@ -220,7 +220,7 @@ export const getStaticProps = async (context) => {
   const page = await getPage(id);
   const blocks = await getBlocks(id);
 
-  // デバッグ用のログを追加
+  
   console.log("Page Data: ", page);
   console.log("Blocks Data: ", blocks);
 
@@ -237,7 +237,7 @@ export const getStaticProps = async (context) => {
       })
   );
   const blocksWithChildren = blocks.map((block) => {
-    // Add child blocks if the block should contain children but none exists
+    
     if (block.has_children && !block[block.type].children) {
       block[block.type]["children"] = childBlocks.find(
         (x) => x.id === block.id
@@ -252,7 +252,7 @@ export const getStaticProps = async (context) => {
       page,
       blocks: blocksWithChildren,
     },
-    revalidate: 1, //ISR...前回から何秒以内のアクセスを無視するか指定します。
+    revalidate: 1, 
   };
 };
 
@@ -273,7 +273,7 @@ export const getStaticPropsNotion = async (textid: any) => {
       })
   );
   const blocksWithChildren = blocks.map((block) => {
-    // Add child blocks if the block should contain children but none exists
+    
     if (block.has_children && !block[block.type].children) {
       block[block.type]["children"] = childBlocks.find(
         (x) => x.id === block.id
@@ -288,6 +288,6 @@ export const getStaticPropsNotion = async (textid: any) => {
       page,
       blocks: blocksWithChildren,
     },
-    revalidate: 1, //ISR...前回から何秒以内のアクセスを無視するか指定します。
+    revalidate: 1, 
   };
 };

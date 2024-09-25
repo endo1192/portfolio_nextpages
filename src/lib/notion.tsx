@@ -8,7 +8,6 @@ const notion = new Client({
 });
 
 /**
- * データベースの内容を取得する
  * @param databaseId - NotionデータベースのID
  * @returns データベースのページリスト
  */
@@ -22,14 +21,14 @@ export const getDatabase = async (databaseId: string): Promise<PageObjectRespons
   }
 };
 
-// ページの情報を取得する関数
+
 export const getPage = async (pageId: string): Promise<PageObjectResponse> => {
   const response = await notion.pages.retrieve({ page_id: pageId });
   return response as PageObjectResponse;
 };
 
 
-// Block型の定義 (必要に応じて詳細を追加)
+
 export interface Block {
   object: string;
   id: string;
@@ -38,7 +37,7 @@ export interface Block {
   [key: string]: any;
 }
 
-// getBlocks関数に型定義を追加
+
 export const getBlocks = async (blockId: string): Promise<Block[]> => {
   const blocks: Block[] = [];
   let cursor: string | undefined = undefined;
@@ -49,7 +48,7 @@ export const getBlocks = async (blockId: string): Promise<Block[]> => {
       block_id: blockId,
     });
 
-    blocks.push(...(results as Block[])); // 結果をBlock型にキャスト
+    blocks.push(...(results as Block[])); 
 
     if (!next_cursor) {
       break;

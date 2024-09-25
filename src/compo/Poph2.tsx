@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
-//import './style.css';  この行をコメントアウトすると何故かスライドの表示がバグる
+
 
 interface PopProps {
   children: React.ReactNode;

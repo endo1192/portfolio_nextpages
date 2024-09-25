@@ -52,7 +52,7 @@ function Slide() {
 const Simg =styled.img`
     width: 85%;
     height: auto;
-    object-fit: cover; /* 画像のアスペクト比を保ちながら、コンテナに収まるように調整 */
+    object-fit: cover; 
 `;
 
 export default Slide;

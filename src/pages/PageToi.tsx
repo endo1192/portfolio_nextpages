@@ -4,13 +4,13 @@ import { FormEventHandler } from "react";
 import Cheader from "../compo/header";
 import Cfooter from "../compo/footer";
 import FullCalendar from '@fullcalendar/react';
-// FullCalendarで月表示を可能にするプラグイン。
+
 import dayGridPlugin from '@fullcalendar/daygrid';
-// FullCalendarで日付や時間が選択できるようになるプラグイン。
+
 import interactionPlugin from "@fullcalendar/interaction";
 import styles from "../styles/home.module.css";
 
-//インポートはプラグインを後にするようにしてください。
+
 
 import  {Calendar}  from '../compo/calendar';
 
@@ -19,12 +19,12 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     //const form = new FormData(event.currentTarget);
 
-    // フォームデータの確認
+    
     //for (const [key, value] of form.entries()) {
     //    console.log(`${key}: ${value}`);
     //}
 
-    // FormDataをJSON形式に変換
+    
     //const formDataObj = Object.fromEntries(form.entries());
 
     const formDataObj = {
@@ -36,9 +36,9 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/mailform`, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json', // JSON形式で送信
+            'Content-Type': 'application/json', 
         },
-        body: JSON.stringify(formDataObj), // JSONとして送信
+        body: JSON.stringify(formDataObj), 
         //body: form, 
     });
 

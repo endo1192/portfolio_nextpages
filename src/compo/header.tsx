@@ -61,7 +61,7 @@ function Cheader() {
     margin: 0;
     list-style: none;
     justify-content: flex-end;
-    flex-grow: 1; /* 親要素内で余ったスペースを占める */
+    flex-grow: 1; 
     color: #f7f9ff;
   `;
 

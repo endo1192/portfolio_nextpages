@@ -17,10 +17,10 @@ import BlogMain from '../compo/blogMain';
 }*/
 
 interface NotionDatabaseProps {
-  pages: PageObjectResponse[]; // Notion APIの型に合わせて型定義を変更
+  pages: PageObjectResponse[]; 
 }
 
-export const databaseId = process.env.NEXT_PUBLIC_DB_URL; // 環境変数からデータベースIDを取得
+export const databaseId = process.env.NEXT_PUBLIC_DB_URL; 
 
 export const getServerSideProps: GetServerSideProps<NotionDatabaseProps> = async (context) => {
   

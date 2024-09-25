@@ -6,10 +6,10 @@ import styled from 'styled-components';
 import { GoogleCalendar } from '../lib/GoogleCalendar';
 
 const Calendarcon = styled.div`
-  width: 60%;  // 必要に応じてサイズを調整
-  max-width: 1200px;  // 最大幅を指定
-  margin: 0 auto;  // 中央に配置
-  padding: 20px;  // 内側の余白
+  width: 60%;  
+  max-width: 1200px;  
+  margin: 0 auto;  
+  padding: 20px;  
 `;
 
 export const Calendar: React.FC = () => {
@@ -48,11 +48,11 @@ export const Calendar: React.FC = () => {
         }
         console.log('API URL:', `${process.env.NEXT_PUBLIC_API_URL}/events`);
 
-        const fetchedEvents = await response.json();  // JSONに変換
+        const fetchedEvents = await response.json();  // jsonに変換
 
-        console.log(fetchedEvents);  // APIレスポンスを確認
+        console.log(fetchedEvents);  
         
-        // Google Calendar API から取得したイベントを FullCalendar 用に変換する
+        
         const formattedEvents = fetchedEvents.items.map((event: any) => ({
           
           title: event.summary,
@@ -60,7 +60,7 @@ export const Calendar: React.FC = () => {
           end: event.end.date || event.end.dateTime,
         }));
 
-        console.log('Formatted Events:', formattedEvents);  // フォーマットされたイベントを確認
+        console.log('Formatted Events:', formattedEvents);  
         setEvents(formattedEvents);
       } catch (error) {
         console.error('Error fetching events:', error);

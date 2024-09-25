@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 
-// Hono APIからデータを取得する関数
+
 export const fetchNotionData = async (id: string) => {
   const pageResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/page/${id}`);
   const blocksResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blocks/${id}`);
@@ -34,7 +34,7 @@ export const fetchNotionData = async (id: string) => {
   };
 };
 
-// getStaticPropsの代わりにデータをAPI経由で取得
+
 export const getServerSideProps: GetStaticProps = async (textid: any) => {
   const { id } = textid!;
   const data = await fetchNotionData(id as string);
@@ -47,7 +47,7 @@ export const getServerSideProps: GetStaticProps = async (textid: any) => {
   };
 };
 
-// ページの表示コンポーネント
+
 const NotionPage = ({ page, blocks }: { page: any; blocks: any[] }) => {
   return (
     <div>
@@ -61,7 +61,7 @@ const NotionPage = ({ page, blocks }: { page: any; blocks: any[] }) => {
   );
 };
 
-// ブロックを描画するコンポーネント
+
 const BlockRenderer = ({ block }: { block: any }) => {
   switch (block.type) {
     case 'paragraph':
@@ -79,10 +79,10 @@ const BlockRenderer = ({ block }: { block: any }) => {
 
 export default NotionPage;
 
-// パスを生成する
+
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: 'blocking', // 必要に応じてページを動的に生成
+    fallback: 'blocking', 
   };
 };

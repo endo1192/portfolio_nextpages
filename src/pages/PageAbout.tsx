@@ -12,7 +12,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 
 
 
-// `getStaticProps`の代わりにデータをAPI経由で取得
+
 export const getServerSideProps: GetStaticProps = async () => {
     const textid = process.env.NOTION_ABOUT_KEY
 

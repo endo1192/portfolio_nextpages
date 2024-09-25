@@ -1,0 +1,26 @@
+
+  
+  .Home{
+  background-image: url(/images/ichi2.jpg);
+    background-size: cover;
+    background-position: top;
+    animation: parallax linear both;
+    animation-timeline: view();
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .home img {
+    width: 500px;
+  }
+  
+  @keyframes parallax{
+  from{
+    background-position:center 0;
+  }
+  
+  to{
+    background-position: center -900px;
+  }
+  }
